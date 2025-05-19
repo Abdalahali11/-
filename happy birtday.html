@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="happy birtday.css" />
+    <title>Happy birthday</title>
+  </head>
+  <body>
+    <!-- Password Lock Screen -->
+    <div id="lockScreen">
+      <div class="futuristic-input">
+        <!-- ... (الكود الأصلي لحقل الإدخال هنا) ... -->
+        <input type="password" name="password" class="input" /> <!-- تغيير type إلى password -->
+      </div>
+    </div>
+
+    <!-- Animation Content -->
+    <canvas id="c"></canvas>
+    
+    <script src="happy birtday.js"></script>
+    <script>
+      // التحقق من كلمة المرور
+      document.querySelector('.input').addEventListener('keypress', function(e) {
+        if(e.key === 'Enter') {
+          if(this.value === '123') { // كلمة المرور المطلوبة
+            document.getElementById('lockScreen').style.display = 'none';
+            startAnimation();
+          } else {
+            alert('كلمة المرور خاطئة!');
+            this.value = '';
+          }
+        }
+      });
+
+      // تأخير تحميل الانيميشن حتى إدخال الكلمة
+      let animationStarted = false;
+      function startAnimation() {
+        if(animationStarted) return;
+        animationStarted = true;
+        
+        // إعادة تهيئة العناصر اللازمة
+        initAnimation();
+      }
+    </script>
+  </body>
+</html>

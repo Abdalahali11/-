@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة دخول خاصة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+
+        .password-box {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        input {
+            width: 250px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+        }
+
+        button {
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #45b7b0;
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: #ff6b6b;
+            margin-top: 15px;
+            display: none;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(10px); }
+            50% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        .shake {
+            animation: shake 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبًا! الرجاء إدخال كلمة المرور</h1>
+        <form id="passwordForm">
+            <div class="password-box">
+                <input type="password" id="password" placeholder="أدخل كلمة المرور هنا" required>
+            </div>
+            <button type="submit">دخول</button>
+        </form>
+        <p class="error" id="errorMsg">كلمة المرور غير صحيحة!</p>
+    </div>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const correctPassword = "66772667215"; // استبدل هذا بكلمة المرور الحقيقية
+            const enteredPassword = document.getElementById('password').value;
+            
+            if(enteredPassword === correctPassword) {
+                window.location.href = "happy birtday.html"; // تأكد من تطابق اسم الملف
+            } else {
+                document.getElementById('errorMsg').style.display = 'block';
+                document.querySelector('.container').classList.add('shake');
+                setTimeout(() => {
+                    document.querySelector('.container').classList.remove('shake');
+                }, 400);
+            }
+        });
+    </script>
+</body>
+</html>
