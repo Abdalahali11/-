@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineering Services</title>
+    <meta name="description" content="Professional engineering services: profile, projects, and special features." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#/home" class="brand" aria-label="Go to home">Engineering Services</a>
+
+      <!-- From Uiverse.io by emmanuelh-dev (adapted) -->
+      <nav class="icon-nav" aria-label="Primary">
+        <div class="icon-nav__wrap">
+          <div class="icon-nav__inner">
+            <button title="Profile, Certificates & Courses" class="icon-btn" data-route="profile" aria-label="Go to profile page">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+
+            <button title="Projects, Walks & Under Construction" class="icon-btn" data-route="work" aria-label="Go to projects page">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4 7a2 2 0 012-2h3l2-2h2l2 2h3a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm2 2v8h12V9H6z"></path>
+              </svg>
+            </button>
+
+            <button title="Special Features" class="icon-btn" data-route="special" aria-label="Go to special features page">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l2.39 4.84L20 7.64l-3.9 3.8.92 5.36L12 14.77 6.98 16.8l.92-5.36L4 7.64l5.61-.8L12 2z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="app">
+      <!-- Home Page -->
+      <section class="page page--active" data-route="home" aria-labelledby="home-title">
+        <section class="hero container">
+          <div class="hero__content">
+            <h1 id="home-title" class="hero__title">Building reliable engineering solutions</h1>
+            <p class="hero__subtitle">
+              I provide end‑to‑end engineering services: design, prototyping, testing, and deployment.
+              Results that scale, delivered with care.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#services">View Services</a>
+              <button class="btn btn--ghost" data-route="work">See Projects</button>
+            </div>
+          </div>
+          <div class="hero__image">
+            <div class="profile-glow">
+              <img alt="Profile picture" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=640&auto=format&fit=crop" />
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="container section">
+          <h2 class="section__title reveal">Services</h2>
+          <div class="cards-grid">
+            <article class="card reveal">
+              <h3>System Design</h3>
+              <p>Architecture, trade‑off analysis, and documentation for robust systems.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Prototyping</h3>
+              <p>Rapid proof‑of‑concept builds with iterative validation.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Testing & QA</h3>
+              <p>Automated and manual testing strategies to ensure reliability.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Deployment</h3>
+              <p>CI/CD pipelines, monitoring, and performance tuning.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="container section">
+          <h2 class="section__title reveal">Website & Contact</h2>
+          <div class="contact-grid">
+            <div class="contact-card reveal">
+              <h3>Website</h3>
+              <ul>
+                <li><strong>Stack</strong>: HTML, CSS, JavaScript</li>
+                <li><strong>Approach</strong>: Performance‑first, accessible, responsive</li>
+                <li><strong>Availability</strong>: Contract, part‑time, or full‑time</li>
+              </ul>
+            </div>
+            <div class="contact-card reveal">
+              <h3>Contact</h3>
+              <ul>
+                <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener">Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Profile & Credentials Page -->
+      <section class="page" data-route="profile" aria-labelledby="profile-title">
+        <div class="container section">
+          <h2 id="profile-title" class="section__title reveal">Profile</h2>
+          <div class="split">
+            <div class="split__col reveal">
+              <p>
+                Experienced engineer with a focus on designing scalable, maintainable systems across disciplines.
+                Passionate about craftsmanship, mentorship, and measurable impact.
+              </p>
+            </div>
+            <div class="split__col reveal">
+              <ul class="facts">
+                <li><strong>Experience</strong>: 8+ years</li>
+                <li><strong>Domains</strong>: Software, embedded, automation</li>
+                <li><strong>Location</strong>: Remote‑friendly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container section">
+          <h2 class="section__title reveal">Certificates</h2>
+          <div class="cards-grid">
+            <article class="card reveal">
+              <h3>PMP</h3>
+              <p>Project Management Professional</p>
+            </article>
+            <article class="card reveal">
+              <h3>PE License</h3>
+              <p>Professional Engineer (State)</p>
+            </article>
+            <article class="card reveal">
+              <h3>Six Sigma Green Belt</h3>
+              <p>Process improvement and quality</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container section">
+          <h2 class="section__title reveal">All Courses</h2>
+          <div class="list reveal">
+            <div class="list__item">Advanced Thermodynamics</div>
+            <div class="list__item">Finite Element Analysis</div>
+            <div class="list__item">Embedded Systems Design</div>
+            <div class="list__item">Control Systems</div>
+            <div class="list__item">Data Structures & Algorithms</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects & Walks Page -->
+      <section class="page" data-route="work" aria-labelledby="work-title">
+        <div class="container section">
+          <h2 id="work-title" class="section__title reveal">Projects</h2>
+          <div class="cards-grid">
+            <article class="card reveal">
+              <h3>Telemetry Platform</h3>
+              <p>Real‑time data collection and visualization for industrial equipment.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Robotics Controller</h3>
+              <p>Modular control stack with safety interlocks and diagnostics.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Energy Optimizer</h3>
+              <p>Adaptive optimization for grid‑connected systems.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container section">
+          <h2 class="section__title reveal">Walks</h2>
+          <div class="list reveal">
+            <div class="list__item">Design review: telemetry pipeline</div>
+            <div class="list__item">Architecture walk: robotics controller</div>
+            <div class="list__item">Post‑mortem: field testing iteration</div>
+          </div>
+        </div>
+
+        <div class="container section">
+          <h2 class="section__title reveal">Under Construction</h2>
+          <div class="cards-grid">
+            <article class="card card--ghost reveal">
+              <h3>Vision System</h3>
+              <p>Computer vision for quality inspection</p>
+            </article>
+            <article class="card card--ghost reveal">
+              <h3>Digital Twin</h3>
+              <p>Simulation platform for predictive maintenance</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Features Page -->
+      <section class="page" data-route="special" aria-labelledby="special-title">
+        <div class="container section">
+          <h2 id="special-title" class="section__title reveal">Special Features</h2>
+          <div class="cards-grid">
+            <article class="card reveal">
+              <h3>Interactive Demos</h3>
+              <p>Hands‑on demos to explore system behavior.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Live Metrics</h3>
+              <p>Auto‑updating components that reflect real‑time signals.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Playground</h3>
+              <p>Parameter tuning workspace with instant feedback.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>© <span id="year"></span> Engineering Services</span>
+        <a href="#/home" class="to-top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
